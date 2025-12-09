@@ -1,9 +1,7 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import LandingPage from "../components/LandingPage";
 import JobListingModal from "../components/JobListingModal";
-import Cards from "../components/SmallComponents/Cards";
-import Filter from "./Filter";
+import LandingPage from "../components/LandingPage";
+import Navbar from "../components/Navbar";
+import FilterPage from "./FilterPage";
 
 const Home = () => {
   return (
@@ -11,11 +9,13 @@ const Home = () => {
       <Navbar />
       <LandingPage />
 
+      <FilterPage/>
+
       {/* cards */}
 
-      <Cards />
+      {/* <Cards /> */}
       
-      <Filter/>
+      {/* <Filter/> */}
       {/* job listing modal */}
 
       <JobListingModal />
