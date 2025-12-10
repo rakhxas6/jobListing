@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { ImCross } from "react-icons/im";
 
-const JobListingModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleSubmit = () => {};
+const JobListingModal = ({ closeModal }) => {
+  
+  const closeBtn = () => {
+  closeModal()
+}
 
   return (
-    <section className="p-6 bg-slate-200 rounded-3xl shadow-lg w-[600px] mx-auto">
+    <section className="p-6 bg-slate-200 rounded-3xl shadow-lg w-[600px] mx-auto z-50">
       <div className="titleSection flex items-center justify-between mb-4">
         <span className="font-bold text-lg">Add Job</span>
-        <span onClick={() => setIsOpen()}>
+        <span onClick={closeBtn}>
           <ImCross />
         </span>
       </div>
@@ -132,6 +133,7 @@ const JobListingModal = () => {
 
         <div className="cta space-x-5 text-white ">
           <button
+            onClick={closeBtn}
             type="button"
             className="px-5 py-2  rounded-md bg-gray-500  hover:bg-gray-600 transition "
           >

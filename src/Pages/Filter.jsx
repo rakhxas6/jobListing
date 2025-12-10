@@ -14,9 +14,13 @@ const Filter = () => {
   };
 
   return (
-    <div className="w-full max-w-sm">
+    <div className=" hidden md:flex flex-col max-w-sm space-y-5 border p-3 rounded-3xl shadow-sm h-fit">
       <div className="flex items-center gap-3 rounded-xl bg-gray-100 px-4 py-3 border border-gray-300 focus-within:border-gray-400 transition">
-        <CiSearch size={22} className="text-gray-600" onClick={()=>handleSearch} />
+        <CiSearch
+          size={22}
+          className="text-gray-600"
+          onClick={() => handleSearch}
+        />
 
         <input
           type="text"
@@ -29,13 +33,13 @@ const Filter = () => {
         />
       </div>
 
-      <FilterType title="Job Type" data={jobTypes}/>
-      <FilterType title="Employment Type" data={employmentTypes}/>
+      <FilterType title="Job Type" data={jobTypes} />
+      <FilterType title="Employment Type" data={employmentTypes} />
 
-      <FilterType title="Seniority" data={seniorityLevels}/>
+      <FilterType title="Seniority" data={seniorityLevels} />
 
-      <FilterType title="Location" data={locations}/>
-<FilterType title="Skills" data={skills} />
+      <FilterType title="Location" data={locations} />
+      <FilterType title="Skills" data={skills} />
     </div>
   );
 };

@@ -9,16 +9,8 @@ const Home = () => {
       <Navbar />
       <LandingPage />
 
-      <FilterPage/>
-
-      {/* cards */}
-
-      {/* <Cards /> */}
-      
-      {/* <Filter/> */}
-      {/* job listing modal */}
-
-      <JobListingModal />
+      {/* <JobListingModal /> */}
+      <FilterPage JobListingModal={JobListingModal} />
     </div>
   );
 };
