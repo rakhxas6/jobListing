@@ -5,41 +5,40 @@ import { jobTypes, skills,employmentTypes,seniorityLevels,locations } from "../j
 
 
 
-const Filter = () => {
+const Filter = ({ onSearch }) => {
   const [input, setInput] = useState("");
 
-  const handleSearch = () => {
-    // You can use input state here
-    console.log("Searching for:", input);
+  const handleSearch = (value) => {
+    setInput(value);
+    onSearch(value); // send value to parent
   };
 
   return (
-    <div className=" hidden md:flex flex-col max-w-sm space-y-5 border p-3 rounded-3xl shadow-sm h-fit">
-      <div className="flex items-center gap-3 rounded-xl bg-gray-100 px-4 py-3 border border-gray-300 focus-within:border-gray-400 transition">
-        <CiSearch
-          size={22}
-          className="text-gray-600"
-          onClick={() => handleSearch}
-        />
-
+    <div className="hidden md:flex flex-col max-w-sm space-y-5 border p-3 rounded-3xl shadow-sm h-fit">
+      <div className="flex items-center gap-3 rounded-xl bg-gray-100 px-4 py-3 border border-gray-300">
+        <CiSearch size={22} className="text-gray-600" />
         <input
           type="text"
-          id="search"
-          name="search"
           placeholder="Search using keywords"
-          className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-500"
+          className="flex-1 bg-transparent outline-none text-gray-800"
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => handleSearch(e.target.value)}
         />
       </div>
 
-      <FilterType title="Job Type" data={jobTypes} />
-      <FilterType title="Employment Type" data={employmentTypes} />
-
-      <FilterType title="Seniority" data={seniorityLevels} />
-
-      <FilterType title="Location" data={locations} />
-      <FilterType title="Skills" data={skills} />
+      <FilterType title="Job Type" data={jobTypes} onSelect={onSearch} />
+      <FilterType
+        title="Employment Type"
+        data={employmentTypes}
+        onSelect={onSearch}
+      />
+      <FilterType
+        title="Seniority"
+        data={seniorityLevels}
+        onSelect={onSearch}
+      />
+      <FilterType title="Location" data={locations} onSelect={onSearch} />
+      <FilterType title="Skills" data={skills} onSelect={onSearch} />
     </div>
   );
 };
