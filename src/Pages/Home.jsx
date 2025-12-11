@@ -4,16 +4,16 @@ import LandingPage from "../components/LandingPage";
 import Navbar from "../components/Navbar";
 import FilterPage from "./FilterPage";
 
-const Home = () => {
+const Home = ({ user, setUser }) => {
   return (
     <div className=" rounded-3xl  h-auto">
-      <Navbar />
+      <Navbar user={user} setUser={setUser} />
       <LandingPage />
 
       {/* <JobListingModal /> */}
       <FilterPage JobListingModal={JobListingModal} />
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };

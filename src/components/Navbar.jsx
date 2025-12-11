@@ -3,8 +3,9 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { MdOutlineManageSearch } from "react-icons/md";
 import { Spin as Hamburger } from "hamburger-react";
 
-const Navbar = () => {
+const Navbar = ({ user,setUser }) => {
   const [isOpen, setOpen] = useState(false);
+  // console.log(user);
 
   return (
     <nav className="flex items-center justify-between p-5 relative">
@@ -66,8 +67,30 @@ const Navbar = () => {
 
       {/* User Profile */}
       <div className="userProfile flex items-center gap-2">
-        <FaRegCircleUser size={24}  color="blue"/>
-        <span className="username text-lg">Lucifer</span>
+        <FaRegCircleUser size={24} color="blue" />
+        {user ? (
+          <div className="flex items-center gap-2">
+            <span className="username text-lg">{user.name}</span>
+            <button
+              onClick={() => {
+                localStorage.removeItem("currentUser"); // Only remove current login
+                setUser(null); // Update state without refresh
+              }}
+              className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 text-sm"
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            <a href="/login" className="text-blue-600 hover:underline">
+              Login
+            </a>
+            <a href="/signup" className="text-blue-600 hover:underline">
+              Signup
+            </a>
+          </div>
+        )}
       </div>
     </nav>
   );

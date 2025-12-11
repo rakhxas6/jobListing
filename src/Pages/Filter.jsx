@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import FilterType from "../components/SmallComponents/FilterType";
-import { jobTypes, skills,employmentTypes,seniorityLevels,locations } from "../jobs";
+import {
+  jobTypes,
+  skills,
+  employmentTypes,
+  seniorityLevels,
+  locations,
+} from "../jobs";
 
-
-
-const Filter = ({ onSearch }) => {
+const Filter = ({
+  onSearch,
+  selectedJobTypes,
+  setSelectedJobTypes,
+  selectedEmployment,
+  setSelectedEmployment,
+  selectedSeniority,
+  setSelectedSeniority,
+  selectedLocations,
+  setSelectedLocations,
+  selectedSkills,
+  setSelectedSkills,
+}) => {
   const [input, setInput] = useState("");
 
   const handleSearch = (value) => {
     setInput(value);
-    onSearch(value); // send value to parent
+    onSearch(value);
   };
 
   return (
@@ -26,19 +42,36 @@ const Filter = ({ onSearch }) => {
         />
       </div>
 
-      <FilterType title="Job Type" data={jobTypes} onSelect={onSearch} />
+      <FilterType
+        title="Job Type"
+        data={jobTypes}
+        selectedItems={selectedJobTypes}
+        onSelect={setSelectedJobTypes}
+      />
       <FilterType
         title="Employment Type"
         data={employmentTypes}
-        onSelect={onSearch}
+        selectedItems={selectedEmployment}
+        onSelect={setSelectedEmployment}
       />
       <FilterType
         title="Seniority"
         data={seniorityLevels}
-        onSelect={onSearch}
+        selectedItems={selectedSeniority}
+        onSelect={setSelectedSeniority}
       />
-      <FilterType title="Location" data={locations} onSelect={onSearch} />
-      <FilterType title="Skills" data={skills} onSelect={onSearch} />
+      <FilterType
+        title="Location"
+        data={locations}
+        selectedItems={selectedLocations}
+        onSelect={setSelectedLocations}
+      />
+      <FilterType
+        title="Skills"
+        data={skills}
+        selectedItems={selectedSkills}
+        onSelect={setSelectedSkills}
+      />
     </div>
   );
 };

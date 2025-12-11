@@ -2,7 +2,7 @@ import { FaEdit, FaTrashAlt } from "react-icons/fa";
 
 const Cards = ({ job, onDelete, onEdit }) => {
   return (
-    <section className="flex flex-col gap-5  p-4 border border-gray-400/30 rounded-2xl shadow-lg hover:shadow-2xl w-80 max-h-fit">
+    <section className="flex flex-col gap-5  p-4 border border-gray-400/30 rounded-2xl shadow-lg hover:shadow-2xl w-80  max-h-fit">
       <div className="topPart flex items-center justify-between">
         <img
           src={job.companyLogo}
