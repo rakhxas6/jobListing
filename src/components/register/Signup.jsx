@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Signup = ({ onSignup, toggleLogin }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +24,7 @@ const Signup = ({ onSignup, toggleLogin }) => {
     localStorage.setItem("currentUser", JSON.stringify(newUser));
 
     alert("Signup successful!");
+    navigate('/login');
     onSignup(newUser); // Auto-login
   };
 

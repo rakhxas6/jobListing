@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+🧰 JobListing – React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern job listing web application built using React, React Router, and Tailwind CSS.
+This project is bootstrapped with Create React App (CRA) and optimized for easy development and deployment.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+🔍 Browse job listings easily
 
-### `npm start`
+📱 Fully responsive UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+⚡ Fast development with Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🎨 Styled using Tailwind CSS
 
-### `npm test`
+🧭 Smooth routing with React Router DOM
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🧩 Reusable component structure
 
-### `npm run build`
+📦 Tech Stack
+Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React 19
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React Router DOM 7
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Tailwind CSS 3
 
-### `npm run eject`
+React Icons
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Hamburger-react
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Developer Tools
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create React App
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ESLint
 
-## Learn More
+Web Vitals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React Testing Library
 
-### Code Splitting
+Jest DOM
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+User Event Testing Tools
 
-### Analyzing the Bundle Size
+🛠 Installation & Setup
+1️⃣ Clone the Repository
+git clone <your-repo-url>
+cd joblisting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2️⃣ Install Dependencies
 
-### Making a Progressive Web App
+Make sure Node.js (v16+) and npm are installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm install
 
-### Advanced Configuration
+3️⃣ Run the Project Locally
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Runs the app in development mode
 
-### Deployment
+Opens at: http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Auto-reloads on save
 
-### `npm run build` fails to minify
+🏗 Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To build the project for deployment:
+
+npm run build
+
+This will:
+
+Create an optimized production build
+
+Minify all files
+
+Generate hashed filenames
+
+Output everything to the /build folder
+
+Your app is ready for deployment. 🚀
+
+🧪 Running Tests
+
+Launch the test runner in watch mode:
+
+npm test
+
+⚠️ Ejecting (Advanced)
+npm run eject
+
+Warning: Ejecting is permanent.
+Use only if you need full control of Webpack, Babel, or CRA configurations.
+
+🌐 Deployment Guide
+
+Official CRA deployment docs:
+https://facebook.github.io/create-react-app/docs/deployment
+
+🐞 Troubleshooting
+❗ npm run build fails to minify
+
+Fix here:
+https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+✨ Author
+Sudhan Kandel
+Feel free to connect or contribute!

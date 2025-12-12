@@ -10,7 +10,7 @@
     "jobType": "Developers",
     "employmentType": "Full Time",
     "workMode": "Remote",
-    "skills": ["JavaScript", "React"],
+    "skills": ["JavaScript"],
     "tags": ["Remote", "JavaScript", "Full Time"]
   },
   {
@@ -24,7 +24,7 @@
     "jobType": "Design",
     "employmentType": "Part Time",
     "workMode": "Hybrid",
-    "skills": ["Figma", "UI Design"],
+    "skills": ["Figma", "UI/UX"],
     "tags": ["Hybrid", "Figma", "Part Time"]
   },
   {

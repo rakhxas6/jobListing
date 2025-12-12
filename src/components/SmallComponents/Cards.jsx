@@ -19,7 +19,7 @@ const Cards = ({ job, onDelete, onEdit }) => {
         <span className="bg-gray-300 px-3 py-2 rounded-full">
           {job.employmentType}
         </span>
-        <span>{job.skills}</span>
+        <span>{job.skills[0]}</span>
         <span>{job.workMode}</span>
       </div>
       <div className="furtherInfo flex flex-auto gap-2">
